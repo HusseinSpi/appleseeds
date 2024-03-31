@@ -10,20 +10,21 @@
             background-color: black;
         }
 
-        div {
+        .container {
             padding: 50px;
             position: relative;
             width: 50px;
             margin: auto;
             margin-top: 100px;
+            padding-left: 20px;
         }
 
         span {
             color: white;
-            
+            white-space: nowrap;
         }
 
-        div::before {
+        .left::before {
             color: #000;
             content: "";
             width: 30px;
@@ -35,7 +36,7 @@
             left: 0;
         }
 
-        div::after {
+        .left::after {
             color: #000;
             content: "";
             width: 30px;
@@ -47,12 +48,37 @@
             left: 0;
         }
 
+        .right::before {
+            color: #000;
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-top: 3px red solid;
+            border-right: 3px red solid;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .right::after {
+            color: #000;
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-bottom: 3px red solid;
+            border-right: 3px red solid;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
         
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <div class="right"></div>
         <span>Cool Border</span>
+        <div class="left"></div>
     </div>
 </body>
 </html>
