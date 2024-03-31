@@ -10,6 +10,7 @@
             height: 800px;
             width: 800px;
             background-color: red;
+            position: relative;
         }
 
         div::after{
@@ -17,11 +18,10 @@
             height: 800px;
             width: 400px;
             background-color: aquamarine;
+            position: absolute;
         }
 
-        div:hover {
-            height: 800px;
-            width: 400px;
+        div:hover::after {
             background-color: blueviolet;
         }
     </style>
