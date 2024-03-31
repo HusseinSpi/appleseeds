@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sign up</h2>
+    <form action="">
+        <label for="Email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="lname">Password:</label><br>
+        <input type="text" id="passw" name="password"><br><br>
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+          <option value="select_age">Select Age</option>
+            <script>
+                var select = document.getElementById("age");
+                for (var i = 18; i <= 100; i++) {
+                    var option = document.createElement("option");
+                    option.text = i;
+                    option.value = i;
+                    select.add(option);
+                }
+            </script>
+        </select><br><br>
+        <label for="text">Tell us a little about yourself</label><br>
+        <textarea name="text" rows="5" cols="50"></textarea>
+        <br><br>
+        <input type="checkbox" id="agree" name="agree" value="agree">
+        <label for="agree"> I Agree to the <a href="">terms of service</a></label><br><br>
+        <input type="submit" value="Sign up">
+    </form>
+    
+</body>
+</html>

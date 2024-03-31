@@ -1,0 +1,16 @@
+.Card {
+    width: 400px;
+    margin: 0 auto;
+    background-color: rgb(128, 167, 219);
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+a {
+    color: #ff9900;
+}
+

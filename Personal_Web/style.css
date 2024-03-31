@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #E3FDFD;
+}
+
+.First_container {
+    position: relative;
+    padding-top: 100px;
+    background-color: #A6E3E9;
+}
+
+.top_cloud {
+    position: absolute;
+    right: 300px;
+    top: 60px;
+}
+
+.middle_cloud1 {
+    position: absolute;
+    top: 100px;
+    right: 1500px;
+}
+
+.middle_cloud2 {
+    position: absolute;
+    top: 230px;
+    left: 1200px;
+}
+
+.bottom_cloud {
+    position: absolute;
+    top: 250px;
+    right: 1250px;
+}
+
+
+.title {
+    text-align: center;
+    color: #5eb6bb;
+}
+
+
+.title h1 {
+    font-size: 5.6rem;
+    font-family: "Sacramento", cursive;
+}
+
+.title p {
+    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 10px;
+}
+
+.mountain {
+    padding-top: 100px;
+}
+
+.about_me {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.my_photo {
+    width: 250px;
+}
+
+.about_me p {
+    width: 30%;
+    margin: auto;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #5eb6bb;
+}
+
+p {
+    color: #5c6466;
+}
+
+hr {
+    border-top: 10px dotted #A6E3E9;
+    width: 20%;
+    border-bottom: none;
+    margin: 100px auto;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    margin: 100px 250px 0 250px;
+}
+
+.parent img {
+    width: 500px;
+}
+
+.skills {
+    text-align: center;
+}
+
+.skills h2 {
+    padding-bottom: 50px;  
+}
+
+.skills p {
+    width: 70%;
+    margin: auto;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    color: #5eb6bb;
+}
+
+.btn {
+    background-color: #71C9CE;
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+.Contact_me p {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.Contact_me {
+    padding-bottom: 100px;
+}
+
+footer {
+    background-color: #A6E3E9;
+    padding: 50px 0 20px;
+}
+
+footer a {
+    color: #5eb6bb;
+    margin: 10px 20px;
+}
+
+footer p {
+    font-size: 0.75rem;
+    padding: 20px 0;
+}

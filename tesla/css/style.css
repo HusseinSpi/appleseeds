@@ -1,0 +1,145 @@
+.notification {
+    background-image: radial-gradient(54.97% 252.54% at 7.36% -134.72%,rgba(108,148,255,.92) 0,rgba(0,0,0,.92) 100%);
+    gap: 15px;
+    padding: 16px 24px;
+    position: relative;
+}
+
+.notification a, .notification span{
+    font-size: 14px;
+}
+
+.notification a {
+    border-bottom: 1px #eee solid;
+}
+
+.notification a:hover {
+    border-bottom: 2px #eee solid;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    height: 117vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.9;
+    filter: drop-shadow(2px 1px 50px #000000);
+}
+
+.navbar {
+    position: relative;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+li a {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 8px;
+    padding: 8px 16px;
+
+}
+
+li a:hover {
+    background: #d1cfcf;
+    color: #000;
+    border-radius: 5px;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    height: 70vh;
+}
+
+.content h2 {
+    font-size: 24px;
+}
+
+.content h1 {
+    font-size: 41px;
+}
+
+.content span {
+    font-size: 18px;
+}
+
+.specifications {
+    position: relative;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.box {
+    width: 120px;
+}
+
+.box span {
+    font-size: 12px;
+}
+
+.buttons {
+    position: relative;
+    text-align: center;
+    padding: 40px 40px 26px 40px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #eee;
+    border: 2px #eee solid;
+    border-radius: 5px;
+    width: 250px;
+    margin: 0 10px;
+}
+
+.btn-light {
+    background: #eee;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+/*  main  */
+
+.page-tow {
+    height: 150vh;
+    background: url(../images/Model-3-Exterior-Desktop-NA.png) no-repeat center center/cover;
+    padding-top: 80px;
+    position: relative;
+}
+
+.content2 {
+    text-align: center;
+    margin: auto;
+    width: 790px;
+}
+
+.content2 h1 {
+    font-size: 28px;
+}
+
+.content2 span {
+    font-size: 14px;
+}

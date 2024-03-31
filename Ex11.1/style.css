@@ -1,0 +1,24 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.box1 {
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+}
+
+.box2 {
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+}
+
+.box3 {
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+}
