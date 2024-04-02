@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .box {
+        width: 300px;
+        height: 100px;
+        border: 1px black solid;
+        text-align: center;
+        line-height: 100px;
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        transition: 1s;
+      }
+
+      .translatyy::after {
+        content: "Cool!";
+        background-color: red;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: -100px;
+        transition: 3s;
+      }
+
+      .translatyy:hover::after {
+        top: 0;
+      }
+
+      span {
+        position: absolute;
+        right: 40%;
+        z-index: 99;
+      }
+
+      .translatex::after {
+        content: "";
+        background-color: blue;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left: -300px;
+        transition: 3s;
+      }
+
+      .translatex:hover::after {
+        left: 0;
+      }
+
+      .rotate::after {
+        content: "";
+        background-color: rgb(255, 166, 0);
+        width: 600px;
+        height: 300px;
+        position: absolute;
+        left: -600px;
+        transition: 3s;
+      }
+
+      .rotate:hover::after {
+        transform: rotate(180deg);
+        left: 0;
+      }
+
+      .scale::after {
+        content: "scale";
+        color: white;
+        background-color: rgb(0, 0, 0);
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        transform: scale(50);
+        transition: 1s;
+        z-index: -1;
+      }
+
+      .scale:hover::after {
+        transform: scale(1);
+        z-index: 1;
+      }
+
+      .skew::after {
+        content: "";
+        color: white;
+        background-color: rgb(255, 0, 191);
+        width: 3px;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: 1s;
+        z-index: -1;
+      }
+
+      .skew:hover::after {
+        transform: rotate(360deg);
+        width: 300px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .skew:hover {
+        transform: skew(10deg, -10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="translatyy box">translatyy</div>
+      <div class="translatex box"><span>translatex</span></div>
+      <div class="rotate box"><span>rotate</span></div>
+      <div class="scale box">scale</div>
+      <div class="skew box"><span>skew</span></div>
+    </div>
+  </body>
+</html>
