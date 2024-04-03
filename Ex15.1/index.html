@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 10rem);
+        grid-template-rows: repeat(4, 50px);
+        width: 400px;
+        gap: 10px;
+      }
+
+      .first-container {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: red;
+        border-radius: 10px;
+      }
+
+      .second-container {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        background-color: blue;
+        border-radius: 10px;
+      }
+
+      .third-container {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: green;
+        border-radius: 10px;
+      }
+
+      .fourth-container {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        background-color: purple;
+        border-radius: 10px;
+      }
+
+      .fifth-container {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-color: yellow;
+        border-radius: 10px;
+      }
+
+      .sixth-container {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background-color: brown;
+        border-radius: 10px;
+      }
+
+      .seventh-container {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: aquamarine;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first-container"></div>
+      <div class="second-container"></div>
+      <div class="third-container"></div>
+      <div class="fourth-container"></div>
+      <div class="fifth-container"></div>
+      <div class="sixth-container"></div>
+      <div class="seventh-container"></div>
+    </div>
+  </body>
+</html>

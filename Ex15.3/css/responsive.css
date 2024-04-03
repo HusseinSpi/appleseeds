@@ -1,0 +1,26 @@
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "sidebar sidebar"
+      "content content"
+      "content content"
+      "sidebar2 sidebar2"
+      "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .container {
+    grid-template-areas:
+      "header header header header"
+      "sidebar content content content"
+      "sidebar2 sidebar2 sidebar2 sidebar2"
+      "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
