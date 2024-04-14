@@ -1,0 +1,13 @@
+.flex-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+
+body {
+  background: linear-gradient(to left, black, rgba(0, 0, 0, 0.8));
+}
+
+img {
+  width: 300px;
+}

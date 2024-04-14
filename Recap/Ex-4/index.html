@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+      .color {
+        width: 250px;
+        height: 250px;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(
+            to right top,
+            rgb(255, 0, 234),
+            rgb(44, 0, 66)
+          )
+          1;
+      }
+
+      .rotate {
+        width: 250px;
+        height: 250px;
+        border: 4px dashed green;
+        animation: 4s rotate- infinite;
+      }
+
+      @keyframes rotate- {
+        0% {
+          right: 0px;
+          transform: rotate(0deg);
+        }
+        100% {
+          right: 100%;
+          transform: rotate(360deg);
+        }
+      }
+
+      .rhombus {
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+        transform: rotate(45deg);
+      }
+
+      .rhombus span {
+        transform: rotate(315deg);
+      }
+
+      .border-wow {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="color">Gradient Border</div>
+      <div class="rotate">Animated Border</div>
+      <div class="rhombus"><span>Shape Border</span></div>
+      <div class="border-wow">Marching Ants Border</div>
+    </div>
+  </body>
+</html>
