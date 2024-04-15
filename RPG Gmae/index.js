@@ -29,7 +29,7 @@ if (weather == "raining" || timeOfDay == "night") {
 let playerWeapon = "big sword";
 let enemyWeapon = "big sword";
 
-if (playerWeapon == enemyWeapon) {
+if (playerWeapon === enemyWeapon) {
   console.log("Weapons clashing");
 } else {
   console.log("not");
@@ -106,7 +106,7 @@ if (day === "sunday") {
   console.log("Special event happening!");
 } else if (day === "monday") {
   console.log("war3");
-} else if (day === "sunday") {
+} else if (day === "tuesday") {
   console.log("Marshmello party");
 } else if (day === "wednesday" || day === "thursday") {
   console.log("Write code examples");
