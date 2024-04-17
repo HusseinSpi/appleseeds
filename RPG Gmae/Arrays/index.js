@@ -1,14 +1,9 @@
 const weaponInventory = ["Sword", "Bow", "Magic Staff"];
 const weaponToCheck = "Sword";
 
-if (
-  weaponInventory.indexOf(weaponToCheck) >= 0 &&
-  weaponInventory.indexOf(weaponToCheck) <= weaponInventory.length - 1
-) {
-  console.log("the weapon is exists");
-} else {
-  console.log("the weapon is not exists");
-}
+weaponInventory.includes(weaponToCheck)
+  ? console.log("the weapon is exists")
+  : console.log("the weapon is not exists");
 
 const questNames = [
   "Dragon's Lair",
@@ -26,27 +21,18 @@ console.log(monsterTypesString);
 
 const monsterToCheck = "Orc";
 
-if (
-  monsterTypes.indexOf(monsterToCheck) >= 0 &&
-  monsterTypes.indexOf(monsterToCheck) <= monsterTypes.length - 1
-) {
-  console.log("the monster is exists");
-} else {
-  console.log("the monster is not exists");
-}
+monsterTypes.includes(monsterToCheck)
+  ? console.log("the monster is exists")
+  : console.log("the monster is not exists");
 
 questNames.reverse();
 const specificQuest = "Rescue the Princess";
-if (
-  questNames.indexOf(specificQuest) >= 0 &&
-  questNames.indexOf(specificQuest) <= questNames.length - 1
-) {
-  console.log(
-    `${specificQuest} found at index ${questNames.indexOf(specificQuest)}`
-  );
-} else {
-  console.log("Quest not found");
-}
+
+questNames.includes(specificQuest)
+  ? console.log(
+      `${specificQuest} found at index ${questNames.indexOf(specificQuest)}`
+    )
+  : console.log("Quest not found");
 
 const monsterList = ["Dragon", "Orc", "Goblin"];
 monsterList.shift();
@@ -101,14 +87,10 @@ quests.sort();
 console.log(quests);
 
 const questToCheck = "Rescue the Princess";
-if (
-  quests.indexOf(questToCheck) >= 0 &&
-  quests.indexOf(questToCheck) <= quests.length - 1
-) {
-  console.log("the quest is exists");
-} else {
-  console.log("the quest is not exists");
-}
+
+quests.includes(questToCheck)
+  ? console.log("the quest is exists")
+  : console.log("the quest is not exists");
 
 scores = [30, 80, 60, 90];
 scores.sort();
