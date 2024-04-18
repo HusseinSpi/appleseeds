@@ -145,7 +145,6 @@ let typeThree = 0;
 
 for (let i = 0; i < enemyHealthMatrix.length; i++) {
   for (let h = 0; h < enemyHealthMatrix[i].length; h++) {
-    // Accessing individual values and adding them to respective variables
     if (i === 0) {
       typeOne += enemyHealthMatrix[i][h];
     } else if (i === 1) {
