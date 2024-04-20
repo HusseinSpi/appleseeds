@@ -1,0 +1,32 @@
+@mixin flex-row {
+  display: flex;
+  gap: $gap;
+  max-width: $flex-width;
+  margin: 0 auto;
+  padding: 0 20rem;
+  margin-top: 10rem;
+
+  .item {
+    width: 100%;
+  }
+}
+
+@mixin background-color {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin btn-before($color) {
+  content: "";
+  width: 110%;
+  height: 120%;
+  position: absolute;
+  background-color: $color;
+  transition: transform 1.3s;
+  z-index: -1;
+}
