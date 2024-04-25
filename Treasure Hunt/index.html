@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasure Hunt Game</title>
+    <style>
+      #grid {
+        display: grid;
+        grid-template-columns: repeat(10, 50px);
+        gap: 2px;
+      }
+
+      .cell {
+        width: 50px;
+        height: 50px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ddd;
+      }
+
+      .player {
+        background-color: blue;
+      }
+
+      .treasure {
+        background-color: gold;
+      }
+
+      .trap {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="grid"></div>
+    <p>Score: <span id="score">0</span></p>
+    <p>Moves Left: <span id="moves">20</span></p>
+    <button onclick="movePlayer('up')">Up</button>
+    <button onclick="movePlayer('down')">Down</button>
+    <button onclick="movePlayer('left')">Left</button>
+    <button onclick="movePlayer('right')">Right</button>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!-- const map = document.getElementById("grid");
+const styleElement = document.querySelector("style");
+const styleContent = styleElement.textContent;
+const repeatValue = styleContent.match(/repeat\((\d+),\s*(\d+px)\)/);
+const repeatValue10 = repeatValue[1];
+
+const setGame = () => {
+  for (let i = 0; i < repeatValue10 * 10; i++) {
+    const newDiv = document.createElement("div");
+    newDiv.className = "cell";
+    map.appendChild(newDiv);
+  }
+};
+
+const checkDiv = (div, random, clas) => {
+  if (!div[random]) return;
+  if (!div[random].classList[1]) {
+    div[random].classList.add(clas);
+  } else {
+    let randomNumber = Math.floor(Math.random() * (repeatValue10 * 10)) + 1;
+    checkDiv(div, randomNumber, clas);
+  }
+};
+
+const setPlayerAndTreasure = () => {
+  const mapDiv = map.querySelectorAll("div.cell");
+  mapDiv[0].classList.add("player");
+
+  for (let i = 0; i < 8; i++) {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    checkDiv(mapDiv, randomNumber, "treasure");
+  }
+
+  for (let i = 0; i < 5; i++) {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    checkDiv(mapDiv, randomNumber, "trap");
+  }
+};
+
+setGame();
+setPlayerAndTreasure(); -->

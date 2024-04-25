@@ -1,4 +1,4 @@
-let characterName = "iron  warrior";
+let characterName = "iron warrior";
 let cCharacterName = characterName.split(" ");
 
 for (let i = 0; i < cCharacterName.length; i++) {

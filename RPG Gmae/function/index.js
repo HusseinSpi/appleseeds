@@ -217,7 +217,8 @@ array = [100, 50, 75, 50, 100, 75, 100];
 console.log(uniqueXP(array));
 
 function sortTitlesAlphabetically(arr) {
-  return arr.sort();
+  const newArr = arr.slice();
+  return newArr.sort();
 }
 
 const gameTitles = [
@@ -226,6 +227,7 @@ const gameTitles = [
   "Halo: Combat Evolved",
 ];
 console.log(sortTitlesAlphabetically(gameTitles));
+console.log(gameTitles);
 
 function filterXPByCriteria(arr, greaterThan, lessThan) {
   let newArr = [];
