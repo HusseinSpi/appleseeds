@@ -103,14 +103,14 @@ const movePlayer = (direction) => {
   if (newX >= 0 && newX < repeatValue10 && newY >= 0 && newY < repeatValue10) {
     if (movesNum === 0) {
       alert("Your steps are over");
-      alert("You lose");
+      alert(`You lose, your score = ${scoreNum}`);
       lose();
       return;
     }
 
     if (gridMap[newX][newY] === "trap") {
       alert("Fell into a trap!");
-      alert("You lose");
+      alert(`You lose, your score = ${scoreNum}`);
       lose();
       return;
     }
