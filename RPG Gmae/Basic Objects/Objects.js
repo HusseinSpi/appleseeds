@@ -213,7 +213,7 @@ const addAbilities = (character, abilities) => {
 
 const fight = (players, enemies) => {
   if (
-    players.position[0] === enemies.position[0] ||
+    players.position[0] === enemies.position[0] &&
     players.position[1] === enemies.position[1]
   ) {
     while (players.health > 0 || enemies.health > 0) {
