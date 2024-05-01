@@ -118,7 +118,7 @@ const gameWorld = {
   },
   removeNPC: function (nameNPC) {
     const index = this.npcs.findIndex(
-      (npcs) => npcs.toLowerCase() === nameNPC.toLowerCase()
+      (npcs) => npcs.name.toLowerCase() === nameNPC.toLowerCase()
     );
     if (index !== -1) {
       this.npcs.splice(index, 1);
@@ -166,6 +166,7 @@ function useItem(character, item) {
       break;
 
     default:
+      console.log("Unknown item");
       break;
   }
 
@@ -209,29 +210,6 @@ const addAbilities = (character, abilities) => {
 // console.log(gameWorld.npcs);
 // gameWorld.removeNPC("tow");
 // console.log(gameWorld.npcs);
-
-const husseinPlayer = gameWorld.createPlayer(
-  "hussein",
-  100,
-  30,
-  [3, 9],
-  "magical stick",
-  "mage"
-);
-
-const darthVader = gameWorld.createEnemies(
-  "Darth Vader",
-  100,
-  20,
-  [3, 5],
-  "sword",
-  "warrior"
-);
-
-husseinPlayer.move([3, 5]);
-console.log(husseinPlayer);
-
-console.log(darthVader);
 
 const fight = (players, enemies) => {
   if (
@@ -315,6 +293,29 @@ const levelUp = (character) => {
   }
 };
 
+const husseinPlayer = gameWorld.createPlayer(
+  "hussein",
+  100,
+  30,
+  [3, 9],
+  "magical stick",
+  "mage"
+);
+
+const darthVader = gameWorld.createEnemies(
+  "Darth Vader",
+  100,
+  20,
+  [3, 5],
+  "sword",
+  "warrior"
+);
+
+husseinPlayer.move([3, 5]);
+console.log(husseinPlayer);
+
+console.log(darthVader);
+
 addAbilities(husseinPlayer, "fire");
 fight(husseinPlayer, darthVader);
 console.log(gameWorld.enemies);
@@ -327,7 +328,7 @@ useItem(husseinPlayer, "Health");
 
 console.log(husseinPlayer);
 
-useItem(husseinPlayer, "Health");
+useItem(husseinPlayer, "mana");
 
 levelUp(husseinPlayer);
 
