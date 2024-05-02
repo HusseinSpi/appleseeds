@@ -73,7 +73,7 @@ const gameWorld = {
   },
   removePlayer: function (namePlayer) {
     const index = this.players.findIndex(
-      (player) => player.name.toLowerCase() === namePlayer.toLowerCase()
+      (player) => player.name.toLowerCase() === namePlayer.name.toLowerCase()
     );
     if (index !== -1) {
       this.players.splice(index, 1);
@@ -354,3 +354,15 @@ const dialog = (character, npc) => {
 NPCStup.move([3, 5]);
 
 dialog(husseinPlayer, NPCStup);
+
+const ahmad = gameWorld.createPlayer("ahmad", 100, 20, [2.3], [], "mage");
+const hu = gameWorld.createPlayer("gfg", 100, 20, [2.3], [], "mage");
+const sd = gameWorld.createPlayer("ahmfdfdad", 100, 20, [2.3], [], "mage");
+const sa = gameWorld.createPlayer("ahmddad", 100, 20, [2.3], [], "mage");
+
+console.log(gameWorld.players);
+
+gameWorld.removePlayer(hu);
+gameWorld.removePlayer(sd);
+
+console.log(gameWorld.players);
