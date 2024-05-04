@@ -1,4 +1,11 @@
 {
   "liveServer.settings.port": 5502,
-  "cSpell.words": ["clas"]
+  "cSpell.words": [
+    "accum",
+    "clas",
+    "islsogram",
+    "Isogram",
+    "maskify",
+    "tribonacci"
+  ]
 }
