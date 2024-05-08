@@ -1,11 +1,20 @@
-const arr = [
-  { name: "hussein", age: 21, mony: false },
-  { name: "ahmad", age: 31, mony: true },
-];
+// const fibonacci = (limit) => {
+//   debugger;
+//   const arr = [];
+//   for (let i = 0; i <= limit; i++) {
+//     if (i === 0 || i === 1) {
+//       arr.push(i);
+//     } else {
+//       arr.push(arr[i - 1] + arr[i - 2]);
+//     }
+//   }
+//   return arr;
+// };
 
-function gg(a, b) {
-  console.log(a.name);
-  console.log(b.name);
-}
+console.log(fibonacci(12));
 
-gg(...arr);
+const fibonacci = (n) => {
+  if (n === 0) {
+    return 1;
+  }
+};
