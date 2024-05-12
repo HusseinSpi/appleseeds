@@ -684,7 +684,7 @@ class CarAgencyManager {
         );
         const car = agency.cars[carIndex].models.splice(modelIndex, 1)[0];
         console.log("The car has been removed successfully");
-        console.log(car);
+        // console.log(car);
         return car;
       }
     }
@@ -748,7 +748,7 @@ class CarAgencyManager {
       let totalRevenue = 0;
       agency.cars.forEach((car) => {
         car.models.forEach((model) => {
-          totalRevenue += model.price;
+          totalRevenue = totalRevenue + model.price;
         });
       });
       console.log("Total revenue calculated successfully");
@@ -766,6 +766,8 @@ class CarAgencyManager {
   // @return {boolean} - true if transferred successfully, false otherwise
   transferCarBetweenAgencies(fromAgencyId, toAgencyId, carId) {
     const car = this.removeCarFromAgency(fromAgencyId, carId);
+    car.ownerId = toAgencyId;
+    console.log(car);
     if (car) {
       return this.addCarToAgency(toAgencyId, car);
     }
@@ -987,7 +989,7 @@ const carAgencyManager = new CarAgencyManager(agencies);
 //   carAgencyManager.searchAgency("NonExistent")
 // );
 
-// Test getAllAgencies
+// // Test getAllAgencies
 // console.log("All Agencies: ", carAgencyManager.getAllAgencies());
 
 // Test addCarToAgency
@@ -1064,10 +1066,10 @@ const carAgencyManager = new CarAgencyManager(agencies);
 // );
 
 // Test transferCarBetweenAgencies
-// console.log(
-//   "Transfer Car Between Agencies: ",
-//   carAgencyManager.transferCarBetweenAgencies("Plyq5M5AZ", "26_IPfHU1", "AZJZ4")
-// );
+console.log(
+  "Transfer Car Between Agencies: ",
+  carAgencyManager.transferCarBetweenAgencies("Plyq5M5AZ", "26_IPfHU1", "AZJZ4")
+);
 // console.log(
 //   "Transfer Car Between Agencies (Non-existent): ",
 //   carAgencyManager.transferCarBetweenAgencies(
@@ -1144,55 +1146,55 @@ const customerManager = new CustomerManager(customers);
 // console.log("Cheapest Car: ", carManager.getCheapestCar());
 
 // // Car Purchase Manager Tests
-const carPurchaseManager = new CarPurchaseManager(agencies, customers);
+// const carPurchaseManager = new CarPurchaseManager(agencies, customers);
 
-// Test sellCar
+// // Test sellCar
 
-console.log(
-  "Search Agency by ID: ",
-  carAgencyManager.searchAgency("Plyq5M5AZ").cash
-);
+// console.log(
+//   "Search Agency by ID: ",
+//   carAgencyManager.searchAgency("Plyq5M5AZ").cash
+// );
 
-console.log(
-  "Search Agency by ID: ",
-  carAgencyManager.searchAgency("Plyq5M5AZ").cars[0].models
-);
+// console.log(
+//   "Search Agency by ID: ",
+//   carAgencyManager.searchAgency("Plyq5M5AZ").cars[0].models
+// );
 
-console.log(
-  "Search Customer by ID: ",
-  customerManager.searchCustomer("BGzHhjnE8")
-);
+// console.log(
+//   "Search Customer by ID: ",
+//   customerManager.searchCustomer("BGzHhjnE8")
+// );
 
-console.log(
-  "Sell Car: ",
-  carPurchaseManager.sellCar("AZJZ4", "BGzHhjnE8", "Plyq5M5AZ")
-);
-console.log(
-  "Sell Car (Non-existent): ",
-  carPurchaseManager.sellCar("NonExistent", "BGzHhjnE8", "Plyq5M5AZ")
-);
-console.log(
-  "Sell Car (Insufficient Funds): ",
-  carPurchaseManager.sellCar("AZJZ4", "Wm6BkA1F0", "Plyq5M5AZ")
-);
+// console.log(
+//   "Sell Car: ",
+//   carPurchaseManager.sellCar("AZJZ4", "BGzHhjnE8", "Plyq5M5AZ")
+// );
+// console.log(
+//   "Sell Car (Non-existent): ",
+//   carPurchaseManager.sellCar("NonExistent", "BGzHhjnE8", "Plyq5M5AZ")
+// );
+// console.log(
+//   "Sell Car (Insufficient Funds): ",
+//   carPurchaseManager.sellCar("AZJZ4", "Wm6BkA1F0", "Plyq5M5AZ")
+// );
 
-console.log(
-  "Search Agency by ID: ",
-  carAgencyManager.searchAgency("Plyq5M5AZ").cash
-);
+// console.log(
+//   "Search Agency by ID: ",
+//   carAgencyManager.searchAgency("Plyq5M5AZ").cash
+// );
 
-console.log(
-  "Search Agency by ID: ",
-  carAgencyManager.searchAgency("Plyq5M5AZ").cars[0].models
-);
+// console.log(
+//   "Search Agency by ID: ",
+//   carAgencyManager.searchAgency("Plyq5M5AZ").cars[0].models
+// );
 
-console.log(
-  "Search Customer by ID: ",
-  customerManager.searchCustomer("BGzHhjnE8")
-);
+// console.log(
+//   "Search Customer by ID: ",
+//   customerManager.searchCustomer("BGzHhjnE8")
+// );
 
-// Test getTotalMarketRevenue
-console.log(
-  "Total Market Revenue: ",
-  carPurchaseManager.getTotalMarketRevenue()
-);
+// // Test getTotalMarketRevenue
+// console.log(
+//   "Total Market Revenue: ",
+//   carPurchaseManager.getTotalMarketRevenue()
+// );
