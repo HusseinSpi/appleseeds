@@ -766,10 +766,11 @@ class CarAgencyManager {
   // @return {boolean} - true if transferred successfully, false otherwise
   transferCarBetweenAgencies(fromAgencyId, toAgencyId, carId) {
     const car = this.removeCarFromAgency(fromAgencyId, carId);
-    car.ownerId = toAgencyId;
     console.log(car);
     if (car) {
-      return this.addCarToAgency(toAgencyId, car);
+      car.ownerId = toAgencyId;
+      this.addCarToAgency(toAgencyId, car);
+      return true;
     }
     return false;
   }
@@ -993,16 +994,16 @@ const carAgencyManager = new CarAgencyManager(agencies);
 // console.log("All Agencies: ", carAgencyManager.getAllAgencies());
 
 // Test addCarToAgency
-// const newCar = {
-//   brand: "toyota",
-//   models: {
-//     name: "Camry",
-//     year: 2021,
-//     price: 30000,
-//     carNumber: "TEST1",
-//     ownerId: "Plyq5M5AZ",
-//   },
-// };
+const newCar = {
+  brand: "ccc",
+  models: {
+    name: "Camry",
+    year: 2021,
+    price: 30000,
+    carNumber: "TEST1",
+    ownerId: "Plyq5M5AZ",
+  },
+};
 // console.log(
 //   "Add Car to Agency: ",
 //   carAgencyManager.addCarToAgency("Plyq5M5AZ", newCar)
