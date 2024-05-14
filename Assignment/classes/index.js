@@ -1067,10 +1067,10 @@ const newCar = {
 // );
 
 // Test transferCarBetweenAgencies
-console.log(
-  "Transfer Car Between Agencies: ",
-  carAgencyManager.transferCarBetweenAgencies("Plyq5M5AZ", "26_IPfHU1", "AZJZ4")
-);
+// console.log(
+//   "Transfer Car Between Agencies: ",
+//   carAgencyManager.transferCarBetweenAgencies("Plyq5M5AZ", "26_IPfHU1", "AZJZ4")
+// );
 // console.log(
 //   "Transfer Car Between Agencies (Non-existent): ",
 //   carAgencyManager.transferCarBetweenAgencies(
@@ -1102,7 +1102,7 @@ const customerManager = new CustomerManager(customers);
 //   customerManager.searchCustomer("NonExistent")
 // );
 
-// // Test getAllCustomers
+// Test getAllCustomers
 // console.log("All Customers: ", customerManager.getAllCustomers());
 
 // // Test changeCustomerCash
@@ -1147,7 +1147,7 @@ const customerManager = new CustomerManager(customers);
 // console.log("Cheapest Car: ", carManager.getCheapestCar());
 
 // // Car Purchase Manager Tests
-// const carPurchaseManager = new CarPurchaseManager(agencies, customers);
+const carPurchaseManager = new CarPurchaseManager(agencies, customers);
 
 // // Test sellCar
 
@@ -1195,7 +1195,7 @@ const customerManager = new CustomerManager(customers);
 // );
 
 // // Test getTotalMarketRevenue
-// console.log(
-//   "Total Market Revenue: ",
-//   carPurchaseManager.getTotalMarketRevenue()
-// );
+console.log(
+  "Total Market Revenue: ",
+  carPurchaseManager.getTotalMarketRevenue()
+);
