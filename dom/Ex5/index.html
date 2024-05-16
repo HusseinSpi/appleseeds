@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paragraph Highlighter</title>
+  </head>
+  <body>
+    <h1>Interactive Paragraph Highlighter</h1>
+    <label for="colorPicker">Choose a color:</label>
+    <input type="color" id="colorPicker" />
+
+    <p onclick="highlight(this)">
+      This is the first paragraph. Click to change its background color.
+    </p>
+    <p onclick="highlight(this)">
+      This is the second paragraph. Click to change its background color.
+    </p>
+    <p onclick="highlight(this)">
+      This is the third paragraph. Click to change its background color.
+    </p>
+    <p onclick="highlight(this)">
+      This is the fourth paragraph. Click to change its background color.
+    </p>
+
+    <script>
+      function highlight(element) {
+        const color = document.getElementById("colorPicker").value;
+        element.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

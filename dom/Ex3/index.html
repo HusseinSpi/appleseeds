@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Slider</title>
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=D0eE1BqcHkb7_dWdPSNAQpFJ0vQrzMT6VS0s1aTrUyqMa7yg-OgoVF9WZbcvzyThXoIV6OwvhUEHOyLzNG4R-zEoI88vIPMJZVXPA8MS5dDqv0c6KFE49J_meJRWff34R3RNqW7Zmo1QIt4gQl0ofoc72GPlQD16thmwN4CavQ3yhCWZ6y3dcmp_Qg5lsJB8"
+      charset="UTF-8"
+    ></script>
+    <style>
+      .container {
+        width: 300px;
+        margin: 300px auto 0;
+      }
+
+      #slider {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      #slider img {
+        border-radius: 5px;
+        width: 100%;
+        display: none;
+      }
+
+      #slider img.active {
+        display: block;
+      }
+
+      .buttons {
+        width: 150px;
+        margin: 10px auto;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #6363d4;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="slider">
+        <img src="./images/image1.jpg" class="active" />
+        <img src="./images/image2.jpg" />
+        <img src="./images/image3.jpg" />
+        <img src="./images/image4.jpg" />
+        <img src="./images/image5.jpg" />
+      </div>
+      <div class="buttons">
+        <button onclick="moveSlide(-1)">Previous</button>
+        <button onclick="moveSlide(1)">Next</button>
+      </div>
+    </div>
+
+    <script>
+      function moveSlide(direction) {
+        const slides = document.querySelectorAll("#slider img");
+        const currentIndex = document.querySelector("#slider img.active");
+        const currentIndexInArray = Array.from(slides).indexOf(currentIndex);
+        if (direction === 1 && currentIndexInArray < slides.length - 1) {
+          currentIndex.classList.remove("active");
+          slides[currentIndexInArray + 1].classList.add("active");
+        } else if (direction === -1 && currentIndexInArray > 0) {
+          currentIndex.classList.remove("active");
+          slides[currentIndexInArray - 1].classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
