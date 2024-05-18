@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="shadow"></div>
+      <div class="player" id="player-one">
+        <h1 id="namePlayer1">Player 1</h1>
+        <h1 class="scoreNum" id="playerOneTotalScore">0</h1>
+        <h2 class="textWin" id="textWin1"></h2>
+        <div class="score">
+          <h2>Current</h2>
+          <h2 id="playerOneScore">0</h2>
+        </div>
+      </div>
+      <div class="player" id="player-two">
+        <h1 id="namePlayer2">Player 2</h1>
+        <h1 class="scoreNum" id="playerTwoTotalScore">0</h1>
+        <h2 class="textWin" id="textWin2"></h2>
+        <div class="score">
+          <h2>Current</h2>
+          <h2 id="playerTwoScore">0</h2>
+        </div>
+      </div>
+      <div class="dice">
+        <button id="newGame">🔁 NEW GAME</button>
+        <img id="img1" src="./Img/dice-1.png" alt="dice-1" />
+        <img id="img2" src="./Img/dice-1.png" alt="dice-2" />
+        <button id="rollBtn">🎲 ROLL DICE</button>
+        <button id="hold">🕹️ HOLD</button>
+      </div>
+      <div class="start">
+        <div class="rules">
+          <h2>Game Instructions</h2>
+          <ul>
+            <li>
+              In your turn - roll the dice (at least) and accumulate the result
+              in "current".
+            </li>
+            <li>
+              You can roll again or click "Hold" to save the points from
+              "current" and end the turn.
+            </li>
+            <li>
+              Note! If you get 6-6 - you will lose all points from "current" and
+              the turn will go to your opponent.
+            </li>
+            <li>
+              If you managed to reach exactly the target score - you win! If you
+              passed it - you lose ...
+            </li>
+          </ul>
+        </div>
+        <div class="get-num">
+          <h2>Please select a target score</h2>
+          <input id="targetScore" type="number" min="1" max="100" />
+          <button id="startBtn">Start</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>97
+  </body>
+</html>
