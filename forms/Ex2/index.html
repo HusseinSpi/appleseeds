@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-2">
+      <h2>Create an account</h2>
+      <form class="left margin-top">
+        <label for="email">Email</label><br />
+        <input class="input" type="text" id="email" name="email" /><br />
+        <div class="margin-top">
+          <label for="phone">Phone</label><br />
+          <input class="input" type="text" id="phone" name="phone" /><br />
+          <p>
+            We strongly recommend adding a phone number. This will help verify
+            your account and keep it safe
+          </p>
+        </div>
+        <div class="margin-top">
+          <div class="flex-row margin-top">
+            <label for="pass">Your password</label><br />
+            <span class="hide"><i class="fa-solid fa-eye-slash"></i> Hide</span>
+          </div>
+          <input
+            class="input"
+            type="password"
+            id="pass"
+            name="password"
+          /><br /><br />
+          <ul class="flex-row">
+            <div>
+              <li>Use 8 or more characters</li>
+              <li>Use a number (e.g. 1234)</li>
+            </div>
+            <div>
+              <li>Use upper and lower case letters (e.g. Aa)</li>
+              <li>Use a symbol (e.g. !@#$)</li>
+            </div>
+          </ul>
+        </div>
+        <input
+          class="dark-btn margin-top"
+          type="submit"
+          value="Sign in"
+        /><br />
+      </form>
+      <span>
+        By continuing, you agree to the <a href="#">Terms of use</a> and
+        <a href="#">Privacy Policy</a>
+      </span>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const passwordInput = document.getElementById("pass");
+
+        const showError = (input, message) => {
+          const errorElement = document.getElementById(input.id + "Error");
+          if (errorElement) {
+            errorElement.textContent = message;
+          } else {
+            const newErrorElement = document.createElement("div");
+            newErrorElement.id = input.id + "Error";
+            newErrorElement.classList.add("error-message");
+            newErrorElement.textContent = message;
+            input.parentNode.insertBefore(newErrorElement, input.nextSibling);
+          }
+          input.classList.add("error");
+        };
+
+        const clearError = (input) => {
+          const errorElement = document.getElementById(input.id + "Error");
+          if (errorElement) {
+            errorElement.textContent = "";
+          }
+          input.classList.remove("error");
+        };
+
+        const validateEmail = (email) => {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+        };
+
+        const validatePassword = (password) => {
+          const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
+          return re.test(password);
+        };
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          if (emailInput.value.length < 3) {
+            showError(emailInput, "Email must be at least 3 characters long.");
+            isValid = false;
+          } else if (!validateEmail(emailInput.value)) {
+            showError(emailInput, "Please enter a valid email.");
+            isValid = false;
+          } else {
+            clearError(emailInput);
+          }
+
+          if (phoneInput.value.length < 10) {
+            showError(
+              phoneInput,
+              "Phone number must be at least 10 digits long."
+            );
+            isValid = false;
+          } else {
+            clearError(phoneInput);
+          }
+
+          if (!validatePassword(passwordInput.value)) {
+            showError(
+              passwordInput,
+              "Password must be at least 8 characters long, containing lowercase, uppercase letters, numbers, and a special character."
+            );
+            isValid = false;
+          } else {
+            clearError(passwordInput);
+          }
+
+          if (isValid) {
+            alert("Form submitted successfully!");
+          }
+        });
+
+        [emailInput, phoneInput, passwordInput].forEach((input) => {
+          input.addEventListener("input", () => clearError(input));
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sign in</h2>
+      <form class="left" id="userForm">
+        <label for="email">Email or mobile phone number</label><br />
+        <input
+          class="input"
+          type="text"
+          id="email"
+          name="email"
+          required
+        /><br />
+        <label for="username">UserName</label><br />
+        <input
+          class="input"
+          type="text"
+          id="username"
+          name="username"
+          required
+        /><br />
+        <div class="flex-row margin-top">
+          <label for="pass">Your password</label><br />
+          <span class="hide"><i class="fa-solid fa-eye-slash"></i> Hide</span>
+        </div>
+        <input
+          class="input"
+          type="password"
+          id="pass"
+          name="pass"
+          required
+        /><br /><br />
+        <input class="btn" type="submit" value="Log in" /><br />
+      </form>
+      <span
+        >By continuing, you agree to the <a href="#">Terms of use</a> and
+        <a href="#">Privacy Policy</a></span
+      ><br /><br />
+      <div class="flex-row">
+        <a href="#">Other issue with sign in</a>
+        <a href="#">Forget your password</a>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("userForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const nickname = document.getElementById("username").value;
+        const password = document.getElementById("pass").value;
+
+        alert(
+          "Nickname: " +
+            nickname +
+            "\nEmail: " +
+            email +
+            "\nPassword: " +
+            password
+        );
+      });
+    </script>
+  </body>
+</html>
