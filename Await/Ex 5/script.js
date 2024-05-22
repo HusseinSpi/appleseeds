@@ -60,27 +60,24 @@ const createErrorMessage = () => {
   target.innerHTML = `<div class="error-message">Error fetching movies. Please try again later.</div>`;
 };
 
-const fetchMovies = () => {
-  fetch(
-    `${API_BASE_URL}movie/popular?language=en-US&page=1&api_key=${apiKey}`,
+async function fetchMovies() {
+  const response = await fetch(
+    `${API_BASE_URL}movie/popular?api_key=${apiKey}`,
     getHttpOptions()
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      data.results.forEach((item) => {
-        const title = item.title;
-        const releaseDate = item.release_date;
-        const picture = getImage(item.poster_path);
-        const rating = item.vote_average;
-        const movie = new Movie(title, releaseDate, picture, rating);
-        createMovieCard(movie);
-      });
-      updateItemCount();
-    })
-    .catch((error) => {
-      console.error("Error fetching movies:", error);
-      createErrorMessage();
-    });
-};
+  );
+  const data = await response.json();
+  const movies = data.results.map(
+    (movie) =>
+      new Movie(
+        movie.title,
+        movie.release_date,
+        getImage(movie.poster_path),
+        movie.vote_average
+      )
+  );
+  movies.forEach((movie) => createMovieCard(movie));
+  updateItemCount();
+  return movies;
+}
 
 fetchMovies();
