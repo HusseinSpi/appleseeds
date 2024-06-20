@@ -1,0 +1,13 @@
+.box {
+  position: relative;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
